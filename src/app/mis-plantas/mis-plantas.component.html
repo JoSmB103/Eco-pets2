@@ -1,0 +1,78 @@
+
+<app-nav></app-nav>
+<section id="nuestros-programas" (click)="Cargar()">
+    <div class="container">
+        <h2 class="plantas">Registro de tus plantas</h2>
+        <button class="agregar" onclick="openModal()">+ Agregar plantas</button><button class="delete" (click)="Borrar()">- Eliminar planta</button><br><br>
+        <div class="programas">
+            <div class="carta" *ngFor="let Plantita of PlantaArray" (click)="openForEdit(Plantita)" >
+                <p>{{Plantita.ID}}</p>
+                <h3>{{Plantita.Nombre}}</h3>
+                <h4>{{Plantita.NombreC}}</h4>
+                <!--[src]="'' + Plantita.Imag"-->
+                <img [src]="'/assets/img/FotosCARD/' + Plantita.Imag"><br><br>
+                <h4>{{Plantita.Familia}}</h4>
+                <h4>{{Plantita.Clima}}</h4>
+                <p>{{Plantita.Comentario}}</p>
+                <button>+ Informacion</button><br>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modalAdd">
+        <div class="contenedor">
+            <div class="cerrar-modal" onclick="CerrarModal()">X</div>
+            <h2>Ingrese una nueva planta</h2>
+            <form><br>
+                <label for="imagen">Seleccione una foto</label>
+                <select id="imagen" name="imagen" id="imagen" [(ngModel)]="SelectedPlanta.Imag" required><br><br>
+                    <option value="Planta1.png">Planta 1</option>
+                    <option value="Planta2.png">Planta 2</option>
+                    <option value="Planta3.png">Planta 3</option>
+                    <option value="Planta4.png">Planta 4</option>
+                    <option value="Planta5.png">Planta 5</option>
+                    <option value="Planta6.png">Planta 6</option>
+                    <option value="Planta7.png">Planta 7</option>
+                    <option value="Planta8.png">Planta 8</option>
+                    <option value="Planta9.png">Planta 9</option>
+                    <option value="Planta10.png">Planta 10</option>
+                    <option value="Planta11.png">Planta 11</option>
+                    <option value="Planta12.png">Planta 12</option>
+                    <option value="Planta13.png">Planta 13</option>
+                    <option value="Planta14.png">Planta 14</option>
+                    <option value="Planta15.png">Planta 15</option>
+                    <option value="Planta16.png">Planta 16</option>
+                </select><br><br>
+                <label for="nombre">Nombre de la planta: </label><input type="text" required id="nombre" name="nombre"
+                    [(ngModel)]="SelectedPlanta.Nombre" maxlength="10"><br><br>
+                <label for="cientifico">Nombre Cientifico:</label><input type="text" required id="cientifico"
+                    name="cientifico" [(ngModel)]="SelectedPlanta.NombreC" maxlength="10"><br><br>
+                <label for="familia">Familia:</label>
+                <select id="familia" name="familia" [(ngModel)]="SelectedPlanta.Familia">
+                    <option value="Acanthaceae" selected>Acanthaceae</option>
+                    <option value="Aceraceae">Aceraceae</option>
+                    <option value="Actinidiaceae">Actinidiaceae</option>
+                    <option value="Agavaceae-Amararilidaceae">Agavaceae-Amararilidaceae</option>
+                    <option value="Aizoaceae">Aizoaceae</option>
+                    <option value="Amaranthaceae">Amaranthaceae</option>
+                    <option value="Anacardiaceae">Anacardiaceae</option>
+                    <option value="Aquifoliaceae">Aquifoliaceae</option>
+                </select><br><br>
+                <label for="clima">Tipo de clima:</label>
+                <select id="clima" name="Clima" [(ngModel)]="SelectedPlanta.Clima">
+                    <option value="Oseanico" selected>Oseanico</option>
+                    <option value="Continental">Continental</option>
+                    <option value="Mediterraneo">Mediterraneo</option>
+                    <option value="Montañoso">Montañoso</option>
+                    <option value="Tropical">Tropical</option>
+                </select><br><br>
+                <label for="coment">Ingrese algun comentario de su planta:</label><br>
+                <textarea name="coment" id="coment" cols="30" rows="3" maxlength="15"
+                    [(ngModel)]="SelectedPlanta.Comentario"></textarea><br><br>
+                <input type="submit" value="Registrar" id="Registrar" (click)="Add()" >
+                <input type="submit" value="Cancelar" onclick="CerrarModal()">
+            </form>
+        </div>
+    </div>
+</section>
+<script src="assets/js/notificaciones.js"></script>
+<app-footer></app-footer>

@@ -1,0 +1,39 @@
+<section class="vh-100 bg-logn">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="assets/planta.png" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="_6luv _52jv">
+
+                <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+                    <div style="text-align:center;">
+                        <p class="lead fw-normal mb-0 me-3">Bienvenido a Eco-Pets</p>
+                    </div>
+
+                    <div class="divider d-flex align-items-center my-4" style="margin: 30px;">
+                        <p class="text-center fw-bold mx-3 mb-0">Ingresa tus datos</p>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="form3Example3" class="form-control form-control-lg"
+                            placeholder="Correo electronico" formControlName="email" style="margin:20px;" />
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <input type="password" id="form3Example4" class="form-control form-control-lg"
+                            placeholder="Contraseña" formControlName="password" style="margin: 20px;" />
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" value="Enviar" class="btn btn-success btn-lg"
+                            style="padding-left: 2.5rem; padding-right: 2.5rem; margin:20px;">Iniciar sesión</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

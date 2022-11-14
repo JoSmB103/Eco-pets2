@@ -1,0 +1,169 @@
+
+img{
+    height: 200px;
+    width: 200px;
+    padding-left: 10px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+button {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+
+
+button:hover {
+    background-color: rgb(101, 33, 165);
+}
+
+.agregar{
+    margin-top: 40px;
+}
+
+#nuestros-programas {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-programas .container {
+    padding: 75px 12px;
+}
+
+#nuestros-programas h2 {
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestros-programas p {
+    display: none;
+}
+
+#nuestros-programas .carta {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+    margin-top: 70px;
+}
+
+#nuestros-programas .programas {
+    display: flex;
+    justify-content: center;
+}
+
+#nuestros-programas p {
+    display: block;
+    margin-bottom: 30px;
+}
+
+#nuestros-programas h2 {
+    font-size: 4em;
+}
+
+#nuestros-programas h3 {
+    margin-top: 0;
+}
+
+#nuestros-programas .carta {
+    padding: 50px;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgba(50, 50, 50, 1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carta:first-child {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5))
+}
+
+.carta:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5))
+}
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5))
+}
+
+.modal{
+    display: none;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.contenedor{
+    background: #BAF6BA;
+    min-width: 400px;
+    max-width: 90%;
+    min-height: 300px;
+    max-height: 90%;
+    padding: 20px;
+    border-radius: 15px;
+    border-color: #41F941;
+    border-width: 20px;
+    border-style: groove;
+    position: relative;
+    color: #022302;
+}
+
+.cerrar-modal{
+    background: red;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+}
+
+#nombre{
+    margin-left: 20px;
+}
+
+#cientifico{
+    margin-left: 36px;
+}
+
+#familia{
+    margin-left: 95px;
+}
+
+#clima{
+    margin-left: 51px;
+}
